@@ -1,0 +1,2144 @@
+EXERCICIO 1
+
+#include <stdio.h>
+
+int main(void)
+{
+	int ano;
+
+	printf("Digite um ano no formato AAAA:\n");
+	scanf("%d",&ano);
+
+	if (ano%4 == 0 && ano%100 != 0)
+	{
+		printf("O ano %d = bissexto.",ano);
+	}
+	else if (ano % 400 == 0)
+	{
+		printf("O ano %d = bissexto.",ano);
+	}
+	else 
+	{
+		printf("O ano %d = normal.",ano);
+	}
+
+}
+
+EXERCICIO 2
+
+#include <stdio.h>
+
+int main(void)
+{
+	int n1;
+
+	printf("Digite um numero inteiro:\n");
+	scanf("%d",&n1);
+
+	if (n1%2 == 0)
+	{
+		printf("O numero %d = par.",n1);
+	}
+	else 
+	{
+		printf("O numero %d = impar.",n1);
+	}
+
+}
+
+EXERCICIO 3
+
+#include <stdio.h>
+
+int main(void)
+{
+	int idade;
+
+	printf("Digite sua idade:\n");
+	scanf("%d",&idade);
+
+	if (idade<12)
+	{
+		printf("Crianca",idade);
+	}
+	else if (idade>=12 && idade <=17)
+	{
+		printf("Adolescente",idade);
+	}
+	else if (idade>=18 && idade <=59)
+	{
+		printf("Adulto",idade);
+	}
+	else 
+	{
+		printf("Idoso",idade);
+	}
+
+
+}
+
+EXERCICIO 4
+#include <stdio.h>
+
+int main(void)
+{
+	int temp;
+
+	printf("Digite uma temperatura em graus Celsius:\n");
+	scanf("%d",&temp);
+
+	if (temp<10)
+	{
+		printf("Muito frio");
+	}
+	else if (temp>=10 && temp <=20)
+	{
+		printf("Frio");
+	}
+	else if (temp>=21 && temp <=30)
+	{
+		printf("Agradavel");
+	}
+	else if (temp>=30 && temp <=40)
+	{
+		printf("Quente");
+	}
+	else
+	{
+		printf("Muito quente");
+	}
+
+
+}
+
+
+EXERCICIO 5
+
+#include <stdio.h>
+
+int main(void)
+{
+	int dia, mes, ano, n1, n2, n3, n4, perfil;
+
+	printf("Sua data de nascimento\nDia: ");
+	scanf("%d",&dia);
+	printf("\nMes: ");
+	scanf("%d",&mes);
+	printf("\nAno: ");
+	scanf("%d",&ano);
+
+	n1 = dia*100+mes+ano;
+	n2 = n1/100;
+	n3 = n1%100;
+	n4 = n2+n3;
+	perfil = n4%5;
+
+
+	switch(perfil)
+	{
+		case 0:
+			printf("Timido");
+			break;
+		case 1:
+			printf("Sonhador");
+			break;
+		case 2:
+			printf("Paquerador");
+			break;
+		case 3:
+			printf("Atraente");
+			break;
+		case 4:
+			printf("Irresistivel");
+			break;
+	}
+
+}
+
+EXERCICIO 6
+
+#include <stdio.h>
+
+int main(void)
+{
+	int n1,n2,n3,n4,aux;
+
+	printf("Digite tres numeros em ordem crescente:\n");
+	scanf("%d %d %d",&n1,&n2,&n3);
+	printf("\nDigite outro numero:\n");
+	scanf("%d",&n4);
+
+	if (n4<n1)
+	{
+		printf("Os numeros em ordem: %d %d %d %d",n3,n2,n1,n4);
+	}
+	else if(n4>n3)
+	{
+		printf("Os numeros em ordem: %d %d %d %d",n4,n3,n2,n1);
+	}
+	else if(n4>n2)
+	{
+		printf("Os numeros em ordem: %d %d %d %d",n3,n4,n2,n1);
+	}
+	else
+	{
+		printf("Os numeros em ordem: %d %d %d %d",n3,n2,n4,n1);
+	}
+
+}
+
+EXERCICIO 7
+
+#include <stdio.h>
+
+int main(void)
+{
+	int dia1, dia2, mes1, mes2, ano1, ano2;
+
+	printf("Digite uma data:\nDia: ");
+	scanf("%d",&dia1);
+	printf("Mes: ");
+	scanf("%d",&mes1);
+	printf("Ano: ");
+	scanf("%d",&ano1);
+
+	printf("Digite outra data:\nDia: ");
+	scanf("%d",&dia2);
+	printf("Mes: ");
+	scanf("%d",&mes2);
+	printf("Ano: ");
+	scanf("%d",&ano2);
+
+	if (ano1<ano2)
+	{
+		printf("Data mais antiga: %d/%d/%d\nData mais recente: %d/%d/%d",dia1,mes1,ano1,dia2,mes2,ano2);
+	}
+	else if(ano1 == ano2 && mes1<mes2)
+	{
+		printf("Data mais antiga: %d/%d/%d\nData mais recente: %d/%d/%d",dia1,mes1,ano1,dia2,mes2,ano2);
+	}
+	else if(ano1 == ano2 && mes1 == mes2)
+	{
+		if (dia1<dia2)
+		printf("Data mais antiga: %d/%d/%d\nData mais recente: %d/%d/%d",dia1,mes1,ano1,dia2,mes2,ano2);
+		else 
+		{
+		printf("Data mais antiga: %d/%d/%d\nData mais recente: %d/%d/%d",dia2,mes2,ano2,dia1,mes1,ano1);
+		}
+	}
+	else 
+	{
+		printf("Data mais antiga: %d/%d/%d\nData mais recente: %d/%d/%d",dia2,mes2,ano2,dia1,mes1,ano1);
+	}
+
+}
+
+EXERCICIO 8
+
+#include <stdio.h>
+
+int main(void)
+{
+	float a1, a2, a3;
+
+	printf("Digite o comprimento dos 3 lados de um triangulo:\n");
+	scanf("%f %f %f", &a1, &a2, &a3);
+
+
+	if (a1 == a2 && a2 == a3)
+	{
+		printf("Triangulo equilatero.");
+	}
+	else if (a1+a2 <= a3 || a1+a3 <= a2 || a2+a3 <= a1)
+	{
+		printf("Esse triangulo nao existe.");
+	}
+	else if (a1 == a2 || a2 == a3 || a1 == a3)
+	{
+		printf("Triangulo isoceles");
+	}
+	else if (a1 != a2 && a2 != a3 && a1 != a3)
+	{
+		printf("Triangulo escaleno");
+	}
+}
+
+EXERCICIO 9 
+
+#include <stdio.h>
+
+int main(void)
+{
+	int I;
+	float n1, n2, n3, aux;
+
+	printf("Digite 3 numeros:\n");
+	scanf("%f %f %f", &n1, &n2, &n3);
+
+	printf("Escolha uma opcao:\n1: Ordem crescente\n2: Ordem decrescente\n3: Maior numero entre os outros\n: ");
+	scanf("%d",&I);
+
+	if (n2<n1)
+	{
+		aux = n1;
+		n1 = n2;
+		n2 = aux;
+	}
+	if (n3<n1)
+	{
+		aux = n1;
+		n1 = n3;
+		n3 = aux;
+	}
+	if (n3<n2)
+	{
+		aux = n2;
+		n2 = n3;
+		n3 = aux;
+	}
+
+	switch (I)
+	{
+		case 1: 
+			printf("Ordem crescente: %.2f %.2f %.2f",n1,n2,n3);
+			break;
+		case 2:
+			printf("Ordem crescente: %.2f %.2f %.2f",n3,n2,n1);
+			break;
+		case 3:
+			printf("Maior entre os outros: %.2f %.2f %.2f",n2,n1,n3);
+			break;
+		default: 
+			printf("Digite uma opcao valida");
+			break;
+	}
+}
+
+EXERCICIO 10
+
+#include <stdio.h>
+#include <math.h>
+
+int main(void)
+{
+	int I;
+	float n1, result;
+
+	printf("Digite um numero:\n");
+	scanf("%f", &n1);
+
+	printf("Escolha uma opcao:\n1: Quadrado\n2: Cubo\n3: Raiz quadrada\n4: Raiz cubica\n: ");
+	scanf("%d",&I);
+
+	switch (I)
+	{
+		case 1: 
+			result = n1*n1;
+			printf("Resultado: %.2f",result);
+			break;
+		case 2:
+			result = n1*n1*n1;
+			printf("Resultado: %.2f",result);
+			break;
+		case 3:
+			result = sqrt(n1);
+			printf("Resultado: %.2f",result);
+			break;
+		case 4:
+			result = cbrt(n1);
+			printf("Resultado: %.2f",result);
+			break;
+		default: 
+			printf("Digite uma opcao valida");
+			break;
+	}
+}
+
+EXERCICIO 11
+
+#include <stdio.h>
+#include <math.h>
+
+int main(void)
+{
+	int I, N1, N2, RESULT;
+	float n1, n2, result;
+
+
+	printf("Escolha uma opcao:\n1: Soma\n2: Subtracao\n3: Multiplicacao\n4: Divisao\n5: Potencia\n6: Raiz n\n7: Resto da divisao\n: ");
+	scanf("%d",&I);
+
+
+	switch (I)
+	{
+		case 1: 
+			printf("Digite um numero:\n");
+			scanf("%f", &n1);
+
+			printf("Digite outro numero:\n");
+			scanf("%f",&n2);
+
+			result = n1+n2;
+
+			printf("Resultado: %.2f",result);
+			break;
+		case 2:
+			printf("Digite um numero:\n");
+			scanf("%f", &n1);
+
+			printf("Digite outro numero:\n");
+			scanf("%f",&n2);
+
+			result = n1-n2;
+
+			printf("Resultado: %.2f",result);
+			break;
+		case 3:
+			printf("Digite um numero:\n");
+			scanf("%f", &n1);
+
+			printf("Digite outro numero:\n");
+			scanf("%f",&n2);
+
+			result = n1*n2;
+
+			printf("Resultado: %.2f",result);
+			break;
+		case 4:
+			printf("Digite um numero:\n");
+			scanf("%f", &n1);
+
+			printf("Digite outro numero:\n");
+			scanf("%f",&n2);
+
+			result = n1/n2;
+
+			printf("Resultado: %.2f",result);
+			break;
+		case 5:
+			printf("Digite um numero:\n");
+			scanf("%f", &n1);
+
+			printf("Digite outro numero:\n");
+			scanf("%f",&n2);
+			result = pow(n1,n2);
+			printf("Resultado: %.2f",result);
+			break;
+		case 6:
+
+			printf("Digite um numero:\n");
+			scanf("%f", &n1);
+
+			printf("Digite outro numero:\n");
+			scanf("%f",&n2);
+
+			result = pow(n1,(1/n2));
+
+			printf("Resultado: %.2f",result);
+			break;
+		case 7:
+			printf("Digite um numero:\n");
+			scanf("%d", &N1);
+
+			printf("Digite outro numero:\n");
+			scanf("%d",&N2);
+
+			RESULT = N1%N2;
+
+			printf("Resultado: %d",RESULT);
+			break;
+		default: 
+			printf("Digite uma opcao valida");
+			break;
+	}
+}
+
+EXERCICIO 12
+
+#include <stdio.h>
+
+int main(void)
+{
+	int h1, m1, h2, m2, h3, m3;
+
+	printf("Digite o horario de inicio:\nHoras: ");
+	scanf("%d",&h1);
+	printf("Minutos: ");
+	scanf("%d",&m1);
+
+	printf("Digite o horario de termino:\nHoras: ");
+	scanf("%d",&h2);
+	printf("Minutos:");
+	scanf("%d",&m2);
+
+	if (h1>h2)
+	{
+		if (m1<m2)
+		{
+		h3 = h2-h1+24;
+		m3 = m2-m1;
+		}
+
+		else 
+		{
+			h3 = h2-h1+23;
+			m3 = m2-m1+60;
+		}
+	}
+	else if (m1<m2)
+	{
+		h3 = h2-h1;
+		m3 = m2-m1;
+	}
+	else
+	{
+		h3 = h2-h1-1;
+		m3 = m2-m1+60;
+	}
+	if (m3 == 60)
+	{
+		h3 = h3+1;
+		m3 = 0;
+	}
+	if (m3 == 0 && h3 == 0)
+	{
+		h3 = 24;
+		m3 = 0;
+	}
+
+	printf("A duracao do jogo foi de %d horas e %d minutos.",h3,m3);
+
+	
+}
+
+EXERCICIO 13
+
+#include <stdio.h>
+
+int main(void)
+{
+	int op;
+	float salario;
+
+	printf("Escolha uma opcao:\n1: Imposto\n2: Novo Salario\n3: Classificacao\n");
+	scanf("%d",&op);
+
+	switch (op)
+	{
+		case 1:
+			
+			printf("Digite seu salario:\n");
+			scanf("%f",&salario);
+
+			if (salario <= 500)
+			{
+				salario = salario*0.05;
+
+				printf("O imposto cobrado sera de %.2f",salario);
+			}
+			else if (salario > 500 && salario <= 850)
+			{
+				salario = salario*0.1;
+
+				printf("O imposto cobrado sera de %.2f",salario);
+			}
+			else if (salario > 850)
+			{
+				salario = salario*0.15;
+
+				printf("O imposto cobrado sera de %.2f",salario);
+			}
+			break;
+
+		case 2:
+
+			printf("Digite seu salario:\n");
+			scanf("%f",&salario);
+
+			if (salario > 1500)
+			{
+				salario = salario + 25;
+				printf("Seu novo salario sera de: %.2f",salario);
+			}
+			else if (salario <= 1500 && salario >= 750)
+			{
+				salario = salario + 50;
+				printf("Seu novo salario sera de: %.2f",salario);
+			}
+			else if (salario < 750 && salario >= 450)
+			{
+				salario = salario + 75;
+				printf("Seu novo salario sera de: %.2f",salario);
+			}
+			else if (salario < 450)
+			{
+				salario = salario + 100;
+				printf("Seu novo salario sera de: %.2f",salario);
+			}
+			break;
+
+		case 3:
+
+			printf("Digite seu salario:\n");
+			scanf("%f",&salario);
+
+			if (salario > 700)
+			{
+				printf("Bem remunerado");
+			}
+			else
+			{
+				printf("Mal remunerado");
+			}
+			break;
+			
+		default:
+			printf("Digite uma opcao valida");
+			break;
+	}
+		
+}
+
+EXERCICIO 14
+
+#include <stdio.h>
+
+int main(void)
+{
+
+	float peso, altura;
+
+	printf("Digite seu peso em kg e sua altura em cm:\n");
+	scanf("%f %f",&peso, &altura);
+
+	if (peso > 90)
+	{
+		if (altura > 170)
+		{
+			printf("Sua classificacao: I");
+		}
+		else if (altura <= 170 && altura >= 120)
+		{
+			printf("Sua classificacao: H");
+		}
+		else if (altura < 120)
+		{
+			printf("Sua classificacao: G");
+		}
+	}
+	else if (peso <=90 && peso > 60)
+	{
+		if (altura > 170)
+		{
+			printf("Sua classificacao: F");
+		}
+		else if (altura <= 170 && altura >= 120)
+		{
+			printf("Sua classificacao: E");
+		}
+		else if (altura < 120)
+		{
+			printf("Sua classificacao: D");
+		}
+	}
+	else if (peso < 60)
+	{
+		if (altura > 170)
+		{
+			printf("Sua classificacao: C");
+		}
+		else if (altura <= 170 && altura >= 120)
+		{
+			printf("Sua classificacao: B");
+		}
+		else if (altura < 120)
+		{
+			printf("Sua classificacao: A");
+		}
+	}
+}
+
+EXERCICIO 15
+
+#include <stdio.h>
+
+int main(void)
+{
+
+	int pais, codigo;
+	float peso, imposto, valor, valor2;
+
+	printf("Digite o codigo do pais, o peso em kg e o codigo do produto:\n");
+	scanf("%d %f %d",&pais, &peso, &codigo);
+
+	peso = peso*1000;
+
+	switch(pais)
+	{
+		case 1:
+			switch(codigo)
+			{
+				case 1:
+					valor = peso*10;
+					imposto = 0;
+					valor2 = valor;
+					break;
+				case 2:
+					valor = peso*10;
+					imposto = 0;
+					valor2 = valor;
+					break;
+				case 3:
+					valor = peso*10;
+					imposto = 0;
+					valor2 = valor;
+					break;
+				case 4:
+					valor = peso*10;
+					imposto = 0;
+					valor2 = valor;
+					break;
+				case 5:
+					valor = peso*25;
+					imposto = 0;
+					valor2 = valor+imposto;
+					break;
+				case 6:
+					valor = peso*25;
+					imposto = 0;
+					valor2 = valor+imposto;
+					break;
+				case 7:
+					valor = peso*25;
+					imposto = 0;
+					valor2 = valor+imposto;
+					break;
+				case 8:
+					valor = peso*35;
+					imposto = 0;
+					valor2 = valor+imposto;
+					break;
+				case 9:
+					valor = peso*35;
+					imposto = 0;
+					valor2 = valor+imposto;
+					break;
+				case 10:
+					valor = peso*35;
+					imposto = 0;
+					valor2 = valor+imposto;
+					break;
+				default:
+					printf("Codigo invalido.");
+					break;
+			}
+			break;
+		case 2:
+			switch(codigo)
+			{
+				case 1:
+					valor = peso*10;
+					imposto = valor*0.15;
+					valor2 = valor;
+					break;
+				case 2:
+					valor = peso*10;
+					imposto = valor*0.15;
+					valor2 = valor;
+					break;
+				case 3:
+					valor = peso*10;
+					imposto = valor*0.15;
+					valor2 = valor;
+					break;
+				case 4:
+					valor = peso*10;
+					imposto = valor*0.15;
+					valor2 = valor;
+					break;
+				case 5:
+					valor = peso*25;
+					imposto = valor*0.15;
+					valor2 = valor+imposto;
+					break;
+				case 6:
+					valor = peso*25;
+					imposto = valor*0.15;
+					valor2 = valor+imposto;
+					break;
+				case 7:
+					valor = peso*25;
+					imposto = valor*0.15;
+					valor2 = valor+imposto;
+					break;
+				case 8:
+					valor = peso*35;
+					imposto = valor*0.15;
+					valor2 = valor+imposto;
+					break;
+				case 9:
+					valor = peso*35;
+					imposto = valor*0.15;
+					valor2 = valor+imposto;
+					break;
+				case 10:
+					valor = peso*35;
+					imposto = valor*0.15;
+					valor2 = valor+imposto;
+					break;
+				default:
+					printf("Codigo invalido.");
+					break;
+			}
+			break;
+			
+		case 3:
+			switch(codigo)
+			{
+				case 1:
+					valor = peso*10;
+					imposto = valor*0.25;
+					valor2 = valor;
+					break;
+				case 2:
+					valor = peso*10;
+					imposto = valor*0.25;
+					valor2 = valor;
+					break;
+				case 3:
+					valor = peso*10;
+					imposto = valor*0.25;
+					valor2 = valor;
+					break;
+				case 4:
+					valor = peso*10;
+					imposto = valor*0.25;
+					valor2 = valor;
+					break;
+				case 5:
+					valor = peso*25;
+					imposto = valor*0.25;
+					valor2 = valor+imposto;
+					break;
+				case 6:
+					valor = peso*25;
+					imposto = valor*0.25;
+					valor2 = valor+imposto;
+					break;
+				case 7:
+					valor = peso*25;
+					imposto = valor*0.25;
+					valor2 = valor+imposto;
+					break;
+				case 8:
+					valor = peso*35;
+					imposto = valor*0.25;
+					valor2 = valor+imposto;
+					break;
+				case 9:
+					valor = peso*35;
+					imposto = valor*0.25;
+					valor2 = valor+imposto;
+					break;
+				case 10:
+					valor = peso*35;
+					imposto = valor*0.25;
+					valor2 = valor+imposto;
+					break;
+				default:
+					printf("Codigo invalido.");
+					break;
+			}
+			break;
+			
+		default:
+			printf("Codigo invalido.");
+			break;
+	}
+
+	printf("Com um peso de %.1f gramas, o valor total do produto %d sera de %.2f, sendo  %.2f de impostos", peso, codigo, valor2, imposto);
+
+	
+}
+
+EXERCICIO 16
+
+#include <stdio.h>
+
+int main(void)
+{
+
+	int estado, carga;
+	float peso, imposto, valor1, valor2;
+	
+
+	printf("Digite o codigo do estado, o peso em ton e o codigo da carga:\n");
+	scanf("%d %f %d",&estado, &peso, &carga);
+
+	peso = peso*1000;
+
+	switch(estado)
+	{
+		case 1:
+			if (carga >= 10 && carga <= 20)
+			{
+				valor1 = peso * 100;
+				imposto = valor1 * 0.35;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 21 && carga <= 30)
+			{
+				valor1 = peso * 250;
+				imposto = valor1 * 0.35;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 31 && carga <= 40)
+			{
+				valor1 = peso * 340;
+				imposto = valor1 * 0.35;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			else if (carga > 40 || carga < 10)
+			{
+				printf("Codigo invalido1");
+			}
+			break;
+		
+		case 2:
+			if (carga >= 10 && carga <= 20)
+			{
+				valor1 = peso * 100;
+				imposto = valor1 * 0.25;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 21 && carga <= 30)
+			{
+				valor1 = peso * 250;
+				imposto = valor1 * 0.25;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 31 && carga <= 40)
+			{
+				valor1 = peso * 340;
+				imposto = valor1 * 0.25;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			else if (carga > 40 || carga < 10)
+			{
+				printf("Codigo invalido2");
+			}
+			break;
+		
+		case 3:
+			if (carga >= 10 && carga <= 20)
+			{
+				valor1 = peso * 100;
+				imposto = valor1 * 0.15;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 21 && carga <= 30)
+			{
+				valor1 = peso * 250;
+				imposto = valor1 * 0.15;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 31 && carga <= 40)
+			{
+				valor1 = peso * 340;
+				imposto = valor1 * 0.15;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			else if (carga > 40 || carga < 10)
+			{
+				printf("Codigo invalido3");
+			}
+			break;
+		
+		case 4:
+			if (carga >= 10 && carga <= 20)
+			{
+				valor1 = peso * 100;
+				imposto = valor1 * 0.5;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 21 && carga <= 30)
+			{
+				valor1 = peso * 250;
+				imposto = valor1 * 0.5;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 31 && carga <= 40)
+			{
+				valor1 = peso * 340;
+				imposto = valor1 * 0.5;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			else if (carga > 40 || carga < 10)
+			{
+				printf("Codigo invalido4");
+			}
+			break;
+		
+		case 5:
+			if (carga >= 10 && carga <= 20)
+			{
+				valor1 = peso * 100;
+				imposto = 0;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 21 && carga <= 30)
+			{
+				valor1 = peso * 250;
+				imposto = 0;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 31 && carga <= 40)
+			{
+				valor1 = peso * 340;
+				imposto = 0;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			else if (carga > 40 || carga < 10)
+			{
+				printf("Codigo invalido5");
+			}
+			break;
+		
+		default:
+			printf("Codigo invalido6");
+			break;
+	}
+	
+}
+
+EXERCICIO 17
+
+#include <stdio.h>
+
+int main()
+{
+	int op, p1, p2, p3, p4;
+	float n1, n2, n3, n4, media;
+		
+	printf("Selecione uma opcao:\n1: Media ponderada\n2: Media aritmetica\n");
+	scanf("%d",&op);
+
+	switch(op)
+	{
+		default:
+			printf("Opcao invalida.");
+			break;
+		case 1:
+			
+			printf("Digite suas notas:\n");
+			scanf("%f %f %f %f",&n1,&n2,&n3,&n4);
+			printf("Digite os pesos:\n");
+			scanf("%d %d %d %d",&p1,&p2,&p3,&p4);
+
+			media = ((n1*p1)+(n2*p2)+(n3*p3)+(n4*p4))/(p1+p2+p3+p4);
+
+			printf("Sua media = %.1f",media);
+
+			break;
+		case 2:
+
+			printf("Digite suas notas:\n");
+			scanf("%f %f %f %f",&n1,&n2,&n3,&n4);
+
+			media = (n1+n2+n3+n4)/4;
+
+			printf("Sua media = %.1f",media);
+
+			break;
+
+	}
+}
+
+EXERCICIO 18
+
+EXERCICIO 1
+
+#include <stdio.h>
+
+int main(void)
+{
+	int ano;
+
+	printf("Digite um ano no formato AAAA:\n");
+	scanf("%d",&ano);
+
+	if (ano%4 == 0 && ano%100 != 0)
+	{
+		printf("O ano %d = bissexto.",ano);
+	}
+	else if (ano % 400 == 0)
+	{
+		printf("O ano %d = bissexto.",ano);
+	}
+	else 
+	{
+		printf("O ano %d = normal.",ano);
+	}
+
+}
+
+EXERCICIO 2
+
+#include <stdio.h>
+
+int main(void)
+{
+	int n1;
+
+	printf("Digite um numero inteiro:\n");
+	scanf("%d",&n1);
+
+	if (n1%2 == 0)
+	{
+		printf("O numero %d = par.",n1);
+	}
+	else 
+	{
+		printf("O numero %d = impar.",n1);
+	}
+
+}
+
+EXERCICIO 3
+
+#include <stdio.h>
+
+int main(void)
+{
+	int idade;
+
+	printf("Digite sua idade:\n");
+	scanf("%d",&idade);
+
+	if (idade<12)
+	{
+		printf("Crianca",idade);
+	}
+	else if (idade>=12 && idade <=17)
+	{
+		printf("Adolescente",idade);
+	}
+	else if (idade>=18 && idade <=59)
+	{
+		printf("Adulto",idade);
+	}
+	else 
+	{
+		printf("Idoso",idade);
+	}
+
+
+}
+
+EXERCICIO 4
+#include <stdio.h>
+
+int main(void)
+{
+	int temp;
+
+	printf("Digite uma temperatura em graus Celsius:\n");
+	scanf("%d",&temp);
+
+	if (temp<10)
+	{
+		printf("Muito frio");
+	}
+	else if (temp>=10 && temp <=20)
+	{
+		printf("Frio");
+	}
+	else if (temp>=21 && temp <=30)
+	{
+		printf("Agradavel");
+	}
+	else if (temp>=30 && temp <=40)
+	{
+		printf("Quente");
+	}
+	else
+	{
+		printf("Muito quente");
+	}
+
+
+}
+
+
+EXERCICIO 5
+
+#include <stdio.h>
+
+int main(void)
+{
+	int dia, mes, ano, n1, n2, n3, n4, perfil;
+
+	printf("Sua data de nascimento\nDia: ");
+	scanf("%d",&dia);
+	printf("\nMes: ");
+	scanf("%d",&mes);
+	printf("\nAno: ");
+	scanf("%d",&ano);
+
+	n1 = dia*100+mes+ano;
+	n2 = n1/100;
+	n3 = n1%100;
+	n4 = n2+n3;
+	perfil = n4%5;
+
+
+	switch(perfil)
+	{
+		case 0:
+			printf("Timido");
+			break;
+		case 1:
+			printf("Sonhador");
+			break;
+		case 2:
+			printf("Paquerador");
+			break;
+		case 3:
+			printf("Atraente");
+			break;
+		case 4:
+			printf("Irresistivel");
+			break;
+	}
+
+}
+
+EXERCICIO 6
+
+#include <stdio.h>
+
+int main(void)
+{
+	int n1,n2,n3,n4,aux;
+
+	printf("Digite tres numeros em ordem crescente:\n");
+	scanf("%d %d %d",&n1,&n2,&n3);
+	printf("\nDigite outro numero:\n");
+	scanf("%d",&n4);
+
+	if (n4<n1)
+	{
+		printf("Os numeros em ordem: %d %d %d %d",n3,n2,n1,n4);
+	}
+	else if(n4>n3)
+	{
+		printf("Os numeros em ordem: %d %d %d %d",n4,n3,n2,n1);
+	}
+	else if(n4>n2)
+	{
+		printf("Os numeros em ordem: %d %d %d %d",n3,n4,n2,n1);
+	}
+	else
+	{
+		printf("Os numeros em ordem: %d %d %d %d",n3,n2,n4,n1);
+	}
+
+}
+
+EXERCICIO 7
+
+#include <stdio.h>
+
+int main(void)
+{
+	int dia1, dia2, mes1, mes2, ano1, ano2;
+
+	printf("Digite uma data:\nDia: ");
+	scanf("%d",&dia1);
+	printf("Mes: ");
+	scanf("%d",&mes1);
+	printf("Ano: ");
+	scanf("%d",&ano1);
+
+	printf("Digite outra data:\nDia: ");
+	scanf("%d",&dia2);
+	printf("Mes: ");
+	scanf("%d",&mes2);
+	printf("Ano: ");
+	scanf("%d",&ano2);
+
+	if (ano1<ano2)
+	{
+		printf("Data mais antiga: %d/%d/%d\nData mais recente: %d/%d/%d",dia1,mes1,ano1,dia2,mes2,ano2);
+	}
+	else if(ano1 == ano2 && mes1<mes2)
+	{
+		printf("Data mais antiga: %d/%d/%d\nData mais recente: %d/%d/%d",dia1,mes1,ano1,dia2,mes2,ano2);
+	}
+	else if(ano1 == ano2 && mes1 == mes2)
+	{
+		if (dia1<dia2)
+		printf("Data mais antiga: %d/%d/%d\nData mais recente: %d/%d/%d",dia1,mes1,ano1,dia2,mes2,ano2);
+		else 
+		{
+		printf("Data mais antiga: %d/%d/%d\nData mais recente: %d/%d/%d",dia2,mes2,ano2,dia1,mes1,ano1);
+		}
+	}
+	else 
+	{
+		printf("Data mais antiga: %d/%d/%d\nData mais recente: %d/%d/%d",dia2,mes2,ano2,dia1,mes1,ano1);
+	}
+
+}
+
+EXERCICIO 8
+
+#include <stdio.h>
+
+int main(void)
+{
+	float a1, a2, a3;
+
+	printf("Digite o comprimento dos 3 lados de um triangulo:\n");
+	scanf("%f %f %f", &a1, &a2, &a3);
+
+
+	if (a1 == a2 && a2 == a3)
+	{
+		printf("Triangulo equilatero.");
+	}
+	else if (a1+a2 <= a3 || a1+a3 <= a2 || a2+a3 <= a1)
+	{
+		printf("Esse triangulo nao existe.");
+	}
+	else if (a1 == a2 || a2 == a3 || a1 == a3)
+	{
+		printf("Triangulo isoceles");
+	}
+	else if (a1 != a2 && a2 != a3 && a1 != a3)
+	{
+		printf("Triangulo escaleno");
+	}
+}
+
+EXERCICIO 9 
+
+#include <stdio.h>
+
+int main(void)
+{
+	int I;
+	float n1, n2, n3, aux;
+
+	printf("Digite 3 numeros:\n");
+	scanf("%f %f %f", &n1, &n2, &n3);
+
+	printf("Escolha uma opcao:\n1: Ordem crescente\n2: Ordem decrescente\n3: Maior numero entre os outros\n: ");
+	scanf("%d",&I);
+
+	if (n2<n1)
+	{
+		aux = n1;
+		n1 = n2;
+		n2 = aux;
+	}
+	if (n3<n1)
+	{
+		aux = n1;
+		n1 = n3;
+		n3 = aux;
+	}
+	if (n3<n2)
+	{
+		aux = n2;
+		n2 = n3;
+		n3 = aux;
+	}
+
+	switch (I)
+	{
+		case 1: 
+			printf("Ordem crescente: %.2f %.2f %.2f",n1,n2,n3);
+			break;
+		case 2:
+			printf("Ordem crescente: %.2f %.2f %.2f",n3,n2,n1);
+			break;
+		case 3:
+			printf("Maior entre os outros: %.2f %.2f %.2f",n2,n1,n3);
+			break;
+		default: 
+			printf("Digite uma opcao valida");
+			break;
+	}
+}
+
+EXERCICIO 10
+
+#include <stdio.h>
+#include <math.h>
+
+int main(void)
+{
+	int I;
+	float n1, result;
+
+	printf("Digite um numero:\n");
+	scanf("%f", &n1);
+
+	printf("Escolha uma opcao:\n1: Quadrado\n2: Cubo\n3: Raiz quadrada\n4: Raiz cubica\n: ");
+	scanf("%d",&I);
+
+	switch (I)
+	{
+		case 1: 
+			result = n1*n1;
+			printf("Resultado: %.2f",result);
+			break;
+		case 2:
+			result = n1*n1*n1;
+			printf("Resultado: %.2f",result);
+			break;
+		case 3:
+			result = sqrt(n1);
+			printf("Resultado: %.2f",result);
+			break;
+		case 4:
+			result = cbrt(n1);
+			printf("Resultado: %.2f",result);
+			break;
+		default: 
+			printf("Digite uma opcao valida");
+			break;
+	}
+}
+
+EXERCICIO 11
+
+#include <stdio.h>
+#include <math.h>
+
+int main(void)
+{
+	int I, N1, N2, RESULT;
+	float n1, n2, result;
+
+
+	printf("Escolha uma opcao:\n1: Soma\n2: Subtracao\n3: Multiplicacao\n4: Divisao\n5: Potencia\n6: Raiz n\n7: Resto da divisao\n: ");
+	scanf("%d",&I);
+
+
+	switch (I)
+	{
+		case 1: 
+			printf("Digite um numero:\n");
+			scanf("%f", &n1);
+
+			printf("Digite outro numero:\n");
+			scanf("%f",&n2);
+
+			result = n1+n2;
+
+			printf("Resultado: %.2f",result);
+			break;
+		case 2:
+			printf("Digite um numero:\n");
+			scanf("%f", &n1);
+
+			printf("Digite outro numero:\n");
+			scanf("%f",&n2);
+
+			result = n1-n2;
+
+			printf("Resultado: %.2f",result);
+			break;
+		case 3:
+			printf("Digite um numero:\n");
+			scanf("%f", &n1);
+
+			printf("Digite outro numero:\n");
+			scanf("%f",&n2);
+
+			result = n1*n2;
+
+			printf("Resultado: %.2f",result);
+			break;
+		case 4:
+			printf("Digite um numero:\n");
+			scanf("%f", &n1);
+
+			printf("Digite outro numero:\n");
+			scanf("%f",&n2);
+
+			result = n1/n2;
+
+			printf("Resultado: %.2f",result);
+			break;
+		case 5:
+			printf("Digite um numero:\n");
+			scanf("%f", &n1);
+
+			printf("Digite outro numero:\n");
+			scanf("%f",&n2);
+			result = pow(n1,n2);
+			printf("Resultado: %.2f",result);
+			break;
+		case 6:
+
+			printf("Digite um numero:\n");
+			scanf("%f", &n1);
+
+			printf("Digite outro numero:\n");
+			scanf("%f",&n2);
+
+			result = pow(n1,(1/n2));
+
+			printf("Resultado: %.2f",result);
+			break;
+		case 7:
+			printf("Digite um numero:\n");
+			scanf("%d", &N1);
+
+			printf("Digite outro numero:\n");
+			scanf("%d",&N2);
+
+			RESULT = N1%N2;
+
+			printf("Resultado: %d",RESULT);
+			break;
+		default: 
+			printf("Digite uma opcao valida");
+			break;
+	}
+}
+
+EXERCICIO 12
+
+#include <stdio.h>
+
+int main(void)
+{
+	int h1, m1, h2, m2, h3, m3;
+
+	printf("Digite o horario de inicio:\nHoras: ");
+	scanf("%d",&h1);
+	printf("Minutos: ");
+	scanf("%d",&m1);
+
+	printf("Digite o horario de termino:\nHoras: ");
+	scanf("%d",&h2);
+	printf("Minutos:");
+	scanf("%d",&m2);
+
+	if (h1>h2)
+	{
+		if (m1<m2)
+		{
+		h3 = h2-h1+24;
+		m3 = m2-m1;
+		}
+
+		else 
+		{
+			h3 = h2-h1+23;
+			m3 = m2-m1+60;
+		}
+	}
+	else if (m1<m2)
+	{
+		h3 = h2-h1;
+		m3 = m2-m1;
+	}
+	else
+	{
+		h3 = h2-h1-1;
+		m3 = m2-m1+60;
+	}
+	if (m3 == 60)
+	{
+		h3 = h3+1;
+		m3 = 0;
+	}
+	if (m3 == 0 && h3 == 0)
+	{
+		h3 = 24;
+		m3 = 0;
+	}
+
+	printf("A duracao do jogo foi de %d horas e %d minutos.",h3,m3);
+
+	
+}
+
+EXERCICIO 13
+
+#include <stdio.h>
+
+int main(void)
+{
+	int op;
+	float salario;
+
+	printf("Escolha uma opcao:\n1: Imposto\n2: Novo Salario\n3: Classificacao\n");
+	scanf("%d",&op);
+
+	switch (op)
+	{
+		case 1:
+			
+			printf("Digite seu salario:\n");
+			scanf("%f",&salario);
+
+			if (salario <= 500)
+			{
+				salario = salario*0.05;
+
+				printf("O imposto cobrado sera de %.2f",salario);
+			}
+			else if (salario > 500 && salario <= 850)
+			{
+				salario = salario*0.1;
+
+				printf("O imposto cobrado sera de %.2f",salario);
+			}
+			else if (salario > 850)
+			{
+				salario = salario*0.15;
+
+				printf("O imposto cobrado sera de %.2f",salario);
+			}
+			break;
+
+		case 2:
+
+			printf("Digite seu salario:\n");
+			scanf("%f",&salario);
+
+			if (salario > 1500)
+			{
+				salario = salario + 25;
+				printf("Seu novo salario sera de: %.2f",salario);
+			}
+			else if (salario <= 1500 && salario >= 750)
+			{
+				salario = salario + 50;
+				printf("Seu novo salario sera de: %.2f",salario);
+			}
+			else if (salario < 750 && salario >= 450)
+			{
+				salario = salario + 75;
+				printf("Seu novo salario sera de: %.2f",salario);
+			}
+			else if (salario < 450)
+			{
+				salario = salario + 100;
+				printf("Seu novo salario sera de: %.2f",salario);
+			}
+			break;
+
+		case 3:
+
+			printf("Digite seu salario:\n");
+			scanf("%f",&salario);
+
+			if (salario > 700)
+			{
+				printf("Bem remunerado");
+			}
+			else
+			{
+				printf("Mal remunerado");
+			}
+			break;
+			
+		default:
+			printf("Digite uma opcao valida");
+			break;
+	}
+		
+}
+
+EXERCICIO 14
+
+#include <stdio.h>
+
+int main(void)
+{
+
+	float peso, altura;
+
+	printf("Digite seu peso em kg e sua altura em cm:\n");
+	scanf("%f %f",&peso, &altura);
+
+	if (peso > 90)
+	{
+		if (altura > 170)
+		{
+			printf("Sua classificacao: I");
+		}
+		else if (altura <= 170 && altura >= 120)
+		{
+			printf("Sua classificacao: H");
+		}
+		else if (altura < 120)
+		{
+			printf("Sua classificacao: G");
+		}
+	}
+	else if (peso <=90 && peso > 60)
+	{
+		if (altura > 170)
+		{
+			printf("Sua classificacao: F");
+		}
+		else if (altura <= 170 && altura >= 120)
+		{
+			printf("Sua classificacao: E");
+		}
+		else if (altura < 120)
+		{
+			printf("Sua classificacao: D");
+		}
+	}
+	else if (peso < 60)
+	{
+		if (altura > 170)
+		{
+			printf("Sua classificacao: C");
+		}
+		else if (altura <= 170 && altura >= 120)
+		{
+			printf("Sua classificacao: B");
+		}
+		else if (altura < 120)
+		{
+			printf("Sua classificacao: A");
+		}
+	}
+}
+
+EXERCICIO 15
+
+#include <stdio.h>
+
+int main(void)
+{
+
+	int pais, codigo;
+	float peso, imposto, valor, valor2;
+
+	printf("Digite o codigo do pais, o peso em kg e o codigo do produto:\n");
+	scanf("%d %f %d",&pais, &peso, &codigo);
+
+	peso = peso*1000;
+
+	switch(pais)
+	{
+		case 1:
+			switch(codigo)
+			{
+				case 1:
+					valor = peso*10;
+					imposto = 0;
+					valor2 = valor;
+					break;
+				case 2:
+					valor = peso*10;
+					imposto = 0;
+					valor2 = valor;
+					break;
+				case 3:
+					valor = peso*10;
+					imposto = 0;
+					valor2 = valor;
+					break;
+				case 4:
+					valor = peso*10;
+					imposto = 0;
+					valor2 = valor;
+					break;
+				case 5:
+					valor = peso*25;
+					imposto = 0;
+					valor2 = valor+imposto;
+					break;
+				case 6:
+					valor = peso*25;
+					imposto = 0;
+					valor2 = valor+imposto;
+					break;
+				case 7:
+					valor = peso*25;
+					imposto = 0;
+					valor2 = valor+imposto;
+					break;
+				case 8:
+					valor = peso*35;
+					imposto = 0;
+					valor2 = valor+imposto;
+					break;
+				case 9:
+					valor = peso*35;
+					imposto = 0;
+					valor2 = valor+imposto;
+					break;
+				case 10:
+					valor = peso*35;
+					imposto = 0;
+					valor2 = valor+imposto;
+					break;
+				default:
+					printf("Codigo invalido.");
+					break;
+			}
+			break;
+		case 2:
+			switch(codigo)
+			{
+				case 1:
+					valor = peso*10;
+					imposto = valor*0.15;
+					valor2 = valor;
+					break;
+				case 2:
+					valor = peso*10;
+					imposto = valor*0.15;
+					valor2 = valor;
+					break;
+				case 3:
+					valor = peso*10;
+					imposto = valor*0.15;
+					valor2 = valor;
+					break;
+				case 4:
+					valor = peso*10;
+					imposto = valor*0.15;
+					valor2 = valor;
+					break;
+				case 5:
+					valor = peso*25;
+					imposto = valor*0.15;
+					valor2 = valor+imposto;
+					break;
+				case 6:
+					valor = peso*25;
+					imposto = valor*0.15;
+					valor2 = valor+imposto;
+					break;
+				case 7:
+					valor = peso*25;
+					imposto = valor*0.15;
+					valor2 = valor+imposto;
+					break;
+				case 8:
+					valor = peso*35;
+					imposto = valor*0.15;
+					valor2 = valor+imposto;
+					break;
+				case 9:
+					valor = peso*35;
+					imposto = valor*0.15;
+					valor2 = valor+imposto;
+					break;
+				case 10:
+					valor = peso*35;
+					imposto = valor*0.15;
+					valor2 = valor+imposto;
+					break;
+				default:
+					printf("Codigo invalido.");
+					break;
+			}
+			break;
+			
+		case 3:
+			switch(codigo)
+			{
+				case 1:
+					valor = peso*10;
+					imposto = valor*0.25;
+					valor2 = valor;
+					break;
+				case 2:
+					valor = peso*10;
+					imposto = valor*0.25;
+					valor2 = valor;
+					break;
+				case 3:
+					valor = peso*10;
+					imposto = valor*0.25;
+					valor2 = valor;
+					break;
+				case 4:
+					valor = peso*10;
+					imposto = valor*0.25;
+					valor2 = valor;
+					break;
+				case 5:
+					valor = peso*25;
+					imposto = valor*0.25;
+					valor2 = valor+imposto;
+					break;
+				case 6:
+					valor = peso*25;
+					imposto = valor*0.25;
+					valor2 = valor+imposto;
+					break;
+				case 7:
+					valor = peso*25;
+					imposto = valor*0.25;
+					valor2 = valor+imposto;
+					break;
+				case 8:
+					valor = peso*35;
+					imposto = valor*0.25;
+					valor2 = valor+imposto;
+					break;
+				case 9:
+					valor = peso*35;
+					imposto = valor*0.25;
+					valor2 = valor+imposto;
+					break;
+				case 10:
+					valor = peso*35;
+					imposto = valor*0.25;
+					valor2 = valor+imposto;
+					break;
+				default:
+					printf("Codigo invalido.");
+					break;
+			}
+			break;
+			
+		default:
+			printf("Codigo invalido.");
+			break;
+	}
+
+	printf("Com um peso de %.1f gramas, o valor total do produto %d sera de %.2f, sendo  %.2f de impostos", peso, codigo, valor2, imposto);
+
+	
+}
+
+EXERCICIO 16
+
+#include <stdio.h>
+
+int main(void)
+{
+
+	int estado, carga;
+	float peso, imposto, valor1, valor2;
+	
+
+	printf("Digite o codigo do estado, o peso em ton e o codigo da carga:\n");
+	scanf("%d %f %d",&estado, &peso, &carga);
+
+	peso = peso*1000;
+
+	switch(estado)
+	{
+		case 1:
+			if (carga >= 10 && carga <= 20)
+			{
+				valor1 = peso * 100;
+				imposto = valor1 * 0.35;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 21 && carga <= 30)
+			{
+				valor1 = peso * 250;
+				imposto = valor1 * 0.35;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 31 && carga <= 40)
+			{
+				valor1 = peso * 340;
+				imposto = valor1 * 0.35;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			else if (carga > 40 || carga < 10)
+			{
+				printf("Codigo invalido1");
+			}
+			break;
+		
+		case 2:
+			if (carga >= 10 && carga <= 20)
+			{
+				valor1 = peso * 100;
+				imposto = valor1 * 0.25;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 21 && carga <= 30)
+			{
+				valor1 = peso * 250;
+				imposto = valor1 * 0.25;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 31 && carga <= 40)
+			{
+				valor1 = peso * 340;
+				imposto = valor1 * 0.25;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			else if (carga > 40 || carga < 10)
+			{
+				printf("Codigo invalido2");
+			}
+			break;
+		
+		case 3:
+			if (carga >= 10 && carga <= 20)
+			{
+				valor1 = peso * 100;
+				imposto = valor1 * 0.15;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 21 && carga <= 30)
+			{
+				valor1 = peso * 250;
+				imposto = valor1 * 0.15;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 31 && carga <= 40)
+			{
+				valor1 = peso * 340;
+				imposto = valor1 * 0.15;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			else if (carga > 40 || carga < 10)
+			{
+				printf("Codigo invalido3");
+			}
+			break;
+		
+		case 4:
+			if (carga >= 10 && carga <= 20)
+			{
+				valor1 = peso * 100;
+				imposto = valor1 * 0.5;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 21 && carga <= 30)
+			{
+				valor1 = peso * 250;
+				imposto = valor1 * 0.5;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 31 && carga <= 40)
+			{
+				valor1 = peso * 340;
+				imposto = valor1 * 0.5;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			else if (carga > 40 || carga < 10)
+			{
+				printf("Codigo invalido4");
+			}
+			break;
+		
+		case 5:
+			if (carga >= 10 && carga <= 20)
+			{
+				valor1 = peso * 100;
+				imposto = 0;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 21 && carga <= 30)
+			{
+				valor1 = peso * 250;
+				imposto = 0;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			if (carga >= 31 && carga <= 40)
+			{
+				valor1 = peso * 340;
+				imposto = 0;
+				valor2 = valor1 + imposto;
+				printf("Com um peso de %.1f kg, o valor total do caminhao com o produto %d sera de %.2f, sendo  %.2f de impostos", peso, carga, valor2, imposto);
+			}
+			else if (carga > 40 || carga < 10)
+			{
+				printf("Codigo invalido5");
+			}
+			break;
+		
+		default:
+			printf("Codigo invalido6");
+			break;
+	}
+	
+}
+
+EXERCICIO 17
+
+#include <stdio.h>
+
+int main()
+{
+	int op, p1, p2, p3, p4;
+	float n1, n2, n3, n4, media;
+		
+	printf("Selecione uma opcao:\n1: Media ponderada\n2: Media aritmetica\n");
+	scanf("%d",&op);
+
+	switch(op)
+	{
+		default:
+			printf("Opcao invalida.");
+			break;
+		case 1:
+			
+			printf("Digite suas notas:\n");
+			scanf("%f %f %f %f",&n1,&n2,&n3,&n4);
+			printf("Digite os pesos:\n");
+			scanf("%d %d %d %d",&p1,&p2,&p3,&p4);
+
+			media = ((n1*p1)+(n2*p2)+(n3*p3)+(n4*p4))/(p1+p2+p3+p4);
+
+			printf("Sua media = %.1f",media);
+
+			break;
+		case 2:
+
+			printf("Digite suas notas:\n");
+			scanf("%f %f %f %f",&n1,&n2,&n3,&n4);
+
+			media = (n1+n2+n3+n4)/4;
+
+			printf("Sua media = %.1f",media);
+
+			break;
+
+	}
+}
+
