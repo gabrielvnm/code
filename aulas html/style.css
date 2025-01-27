@@ -1,0 +1,40 @@
+/*
+tag {
+	
+}
+.class{
+	
+}
+#id {
+	
+}
+*/
+
+body {
+	font-family: helvetica;
+	margin-left: 30px;
+	margin-right: 30px;
+	color: white;
+}
+
+#cabecalho {
+	padding: 10px;
+	text-align: center;
+	background-color: #E4080A;
+}
+
+#corpo {
+	padding: 5%;
+	background-color: #E4080A;
+}
+
+.secao {
+	text-align: center;
+	color: black;
+	background-color: yellow;
+}
+
+#nome{
+	color:yellow;
+
+}
