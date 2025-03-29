@@ -49,5 +49,5 @@ int main(){
         }
     }
     cout <<"acabouuuu" <<endl;    
-    cout <<"foram " << tentativas << "tentativas" <<endl;    
+    cout <<"foram " << tentativas << " tentativas" <<endl;    
 } 
